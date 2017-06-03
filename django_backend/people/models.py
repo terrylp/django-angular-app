@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.db import models
-
+from mongoengine import Document, fields
 # Create your models here.
+
+
+class Person(Document):
+    name = fields.StringField(required=True)
